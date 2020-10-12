@@ -42,7 +42,31 @@ console.log('12-', itCompanies.join(' ,'), ' are big IT companies')
 
 let check = 'Microsoft'
 itCompanies.includes(check)
-    ? console.log('12', check, 'exists')
-    : console.log('12', check, 'doesn\'t exist')
+    ? console.log('13', check, 'exists')
+    : console.log('13', check, 'not found')
 
+let companies = Array();
+for (let itCompany of itCompanies){
+    let count = 0;
+    for (let char of itCompany.split('')){
+        if (char == 'o'){
+           count++; 
+        }
+        if (count > 1){
+            companies.push(itCompany);
+            break;
+        }
+    } 
+}
+
+console.log('14-', companies);
+console.log('15-', itCompanies.sort())
+console.log('16-', itCompanies.reverse())
+console.log('17-', itCompanies.slice(0,3))
+console.log('18-', itCompanies.slice(-3,itCompanies.length))
+console.log('19-', itCompanies.slice(itCompanies.length/2, itCompanies.length/2+1))
+console.log('20-', itCompanies.splice(0,1))
+console.log('20-', itCompanies.splice(itCompanies.length/2, 1))
+console.log('20-', itCompanies.splice(itCompanies.length-1, 1))
+console.log('20-', itCompanies.splice())
 
